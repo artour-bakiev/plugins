@@ -1146,6 +1146,11 @@ class MyWebViewPlatform implements WebViewPlatform {
   Future<bool> clearCookies() {
     return Future<bool>.sync(() => null);
   }
+
+  @override
+  Future<String> getCookie(String url) {
+    return Future<String>.sync(() => null);
+  }
 }
 
 class MyWebViewPlatformController extends WebViewPlatformController {

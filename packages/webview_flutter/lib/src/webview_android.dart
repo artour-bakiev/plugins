@@ -11,6 +11,7 @@ import 'package:flutter/widgets.dart';
 
 import '../platform_interface.dart';
 import 'webview_method_channel.dart';
+import 'webview_method_channel.dart';
 
 /// Builds an Android webview.
 ///
@@ -60,4 +61,8 @@ class AndroidWebView implements WebViewPlatform {
 
   @override
   Future<bool> clearCookies() => MethodChannelWebViewPlatform.clearCookies();
+
+  @override
+  Future<String> getCookie(String url) =>
+      MethodChannelWebViewPlatform.getCookie(url);
 }
